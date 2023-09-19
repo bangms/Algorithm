@@ -1,0 +1,16 @@
+-- 코드를 입력하세요
+-- SELECT 
+--     CAR_ID AS "아이디", 
+--     CASE WHEN DAILY_FEE >= 200000 THEN '못삼'
+--     ELSE CASE 
+--         WHEN DAILY_FEE >= 150000 THEN 'A'
+--         WHEN DAILY_FEE >= 100000 THEN 'B'
+--         WHEN DAILY_FEE >= 50000 THEN 'C'
+--         ELSE 'D'
+--         END
+--     END AS "등급"
+-- FROM CAR_RENTAL_COMPANY_CAR;
+
+SELECT ROUND(AVG(DAILY_FEE), 0) AS AVERAGE_FEE 
+    FROM CAR_RENTAL_COMPANY_CAR
+    WHERE CAR_TYPE = 'SUV';
